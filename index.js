@@ -16,6 +16,19 @@ else
 }
 let choice=prompt("What's your call "+tossperson+" : type (heads) or (tails) OR (h) or (t)");
 choice=choice.toUpperCase();
+if(choice!=="HEADS" || choice!=="TAILS" || choice!=="H" || choice!=="T")
+{
+    let flag=1;
+    while(flag)
+    {
+        choice=prompt("You entered a wrong input!!! "+tossperson+" Please type (heads) or (tails) OR (h) or (t) ");
+        choice=choice.toUpperCase();
+        if(choice==="HEADS" || choice==="TAILS" || choice==="H" || choice==="T")
+        {
+            break;
+        }
+    }
+}
 let randomnumber=Math.floor(Math.random()*2)+1;
 if(randomnumber===1 && tossperson===name1)
 {
